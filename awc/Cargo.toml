@@ -24,13 +24,15 @@ path = "src/lib.rs"
 features = ["openssl", "rustls", "compress-brotli", "compress-gzip", "compress-zstd", "cookies"]
 
 [features]
-default = ["compress-brotli", "compress-gzip", "compress-zstd", "cookies"]
+default = ["cookies"]
 
 # openssl
 openssl = ["tls-openssl", "actix-tls/openssl"]
 
 # rustls
 rustls = ["tls-rustls", "actix-tls/rustls"]
+
+compress = ["compress-brotli", "compress-gzip", "compress-zstd"]
 
 # Brotli algorithm content-encoding support
 compress-brotli = ["actix-http/compress-brotli", "__compress"]

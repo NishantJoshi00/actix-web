@@ -20,7 +20,7 @@ edition = "2018"
 
 [package.metadata.docs.rs]
 # features that docs.rs will build with
-features = ["http2", "ws", "openssl", "rustls", "compress-brotli", "compress-gzip", "compress-zstd"]
+features = ["http2", "ws", "openssl", "rustls"]
 
 [lib]
 name = "actix_http"
@@ -47,6 +47,8 @@ openssl = ["actix-tls/accept", "actix-tls/openssl"]
 rustls = ["actix-tls/accept", "actix-tls/rustls"]
 
 # Compression codecs
+compress = ["compress-brotli", "compress-gzip", "compress-zstd"]
+
 compress-brotli = ["__compress", "brotli"]
 compress-gzip   = ["__compress", "flate2"]
 compress-zstd   = ["__compress", "zstd"]

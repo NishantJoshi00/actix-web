@@ -28,8 +28,9 @@ name = "actix_web"
 path = "src/lib.rs"
 
 [features]
-default = ["macros", "compress-brotli", "compress-gzip", "compress-zstd", "cookies"]
+default = ["macros", "cookies"]
 
+compress = ["compress-gzip", "compress-brotli", "compress-zstd"]
 # Brotli algorithm content-encoding support
 compress-brotli = ["actix-http/compress-brotli", "__compress"]
 # Gzip and deflate algorithms content-encoding support
